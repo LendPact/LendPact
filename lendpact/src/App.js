@@ -9,15 +9,16 @@ import Connectwallet from "./pages/Connectwallet";
 import Footer from "./components/footer";
 
 function App() {
+  console.log('App component is being rendered');
   return (
     <>
       <Router>
         <Navbar />
         <Routes>
-          <Route path='/' exact component={Home} />
-          <Route path='/lend' component={Lend} />
-          <Route path='/borrow' component={Borrow} />
-          <Route path='/connect-wallet' component={Connectwallet} />
+          <Route path='/' element={<Home/>} exact />
+          <Route path='/lend' element={<Lend/>} />
+          <Route path='/borrow' component={<Borrow/>} />
+          <Route path='/connect-wallet' element={<Connectwallet/>} />
         </Routes>
         <Footer />
       </Router>

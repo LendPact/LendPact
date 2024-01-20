@@ -2,15 +2,15 @@ import React from 'react';
 import '../App.css';
 
 import HeroSection from '../components/herosection';
-import Footer from '../components/footer';
+
 
 
 function Home() {
+    console.log('Home component is being rendered');
   return (
     <>
       <HeroSection />
       
-      <Footer />
     </>
   );
 }

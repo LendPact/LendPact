@@ -2,9 +2,10 @@ import React from 'react';
 import '../App.css';
 import { Button } from './button.js';
 import './herosection.css';
-import {video} from '../videos/video-2.mp4';
+
 
 function HeroSection() {
+  console.log('HeroSection component is being rendered');
   return (
     <div className='hero-container'>
       <video src='/videos/video-2.mp4' autoPlay loop muted />
@@ -24,7 +25,7 @@ function HeroSection() {
           buttonSize='btn--large'
           onClick={console.log('hey')}
         >
-          How it works? <i className='far fa-play-circle' />
+          How does it work? <i className='far fa-play-circle' />
         </Button>
       </div>
     </div>
