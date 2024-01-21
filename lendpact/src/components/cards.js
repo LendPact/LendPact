@@ -24,7 +24,7 @@ function Cards() {
           </ul>
           <ul className='cards__items'>
             <CardItem
-              src='images/makerdao.jpg'
+              src='images/makerdao.jpeg'
               text='MakerDAO is a decentralized organization dedicated to bringing financial stability and transparency to the world economy.'
               label='Defi'
               path='/lend'
