@@ -8,7 +8,7 @@ import { useAccount } from "wagmi";
 
 
 function HeroSection() {
-  const { address, isConnecting, isDisconnected,isConnected } = useAccount();
+  const {  isConnecting, isDisconnected,isConnected } = useAccount();
   const handleBecomeLenderClick = () => {  console.log("handleBecomeLenderClick");  
   if (isConnected) {
      // Wallet is connected, proceed with your logic
@@ -54,7 +54,7 @@ function HeroSection() {
           className='btns'
           buttonStyle='btn--outline'
           buttonSize='btn--large'
-          to='/borrow'  // Security best practice
+          to='/borrow'  
         onClick={console.log('hey')}
         >
           Become a Borrower <i className='far fa-play-circle' />

@@ -2,8 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ProgressBar from 'react-bootstrap/ProgressBar';
-// index.js
-import 'bootstrap/dist/css/bootstrap.min.css';
+//import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function CardItem(props) {
