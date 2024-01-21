@@ -2,8 +2,8 @@ import React, { useState,useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./navbar.css";
 import logoImage from "../images/logo.png";
-import { Button } from "./button.js";
 
+import { ConnectKitButton } from "connectkit";
 function Navbar() {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
@@ -58,7 +58,7 @@ function Navbar() {
                 Borrow
               </Link>
             </li>
-
+{/*
             <li>
               <Link
                 to='/connect-wallet'
@@ -66,10 +66,11 @@ function Navbar() {
                 onClick={closeMobileMenu}
               >
                 Connect Wallet
-              </Link>
-            </li>
+              </Link>  
+            </li>  */}
           </ul>
-          {button && <Button buttonStyle='btn--outline'>CONNECT WALLET</Button>}
+          <ConnectKitButton />
+       {/*  {button && <Button buttonStyle='btn--outline'>CONNECT WALLET</Button>} */}
       </div>
       </nav>
     </>

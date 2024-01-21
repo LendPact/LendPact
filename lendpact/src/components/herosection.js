@@ -17,7 +17,7 @@ function HeroSection() {
           buttonStyle='btn--outline'
           buttonSize='btn--large'
         >
-          Become a lender.
+          Become a lender
         </Button>
         <Button
           className='btns'

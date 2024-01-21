@@ -7,11 +7,30 @@ import Lend from "./pages/Lend";
 import Borrow from "./pages/Borrow";
 import Connectwallet from "./pages/Connectwallet";
 import Footer from "./components/footer";
+import { WagmiConfig, createConfig } from "wagmi";
+import { ConnectKitProvider, getDefaultConfig } from "connectkit";
+
+
+const config = createConfig(
+  getDefaultConfig({
+    // Required API Keys
+    alchemyId: process.env.e6SHCEdqjA7GcT9xCeH7kTh1TUmvLZhB, // or infuraId
+    walletConnectProjectId: process.env.d2f74473f584eeee324eefa283ab3b5e,
+
+    // Required
+    appName: "LendPact",
+
+  }),
+);
+
 
 function App() {
   console.log('App component is being rendered');
   return (
     <>
+    <WagmiConfig config={config}>
+    <ConnectKitProvider>
+    
       <Router>
         <Navbar />
         <Routes>
@@ -22,9 +41,11 @@ function App() {
         </Routes>
         <Footer />
       </Router>
-    </>
-
-      
+    
+    
+      </ConnectKitProvider>
+    </WagmiConfig>
+      </>
     
   );
 }
