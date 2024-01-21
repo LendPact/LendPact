@@ -1,4 +1,8 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
+import "./components/cards.css";
+import "./components/herosection.css";
+import "./components/button.css";
 import Navbar from "./components/navbar";
 import React from "react";
 import { BrowserRouter as Router, Routes, Route  } from "react-router-dom";
@@ -9,6 +13,7 @@ import Connectwallet from "./pages/Connectwallet";
 import Footer from "./components/footer";
 import { WagmiConfig, createConfig } from "wagmi";
 import { ConnectKitProvider, getDefaultConfig } from "connectkit";
+
 
 
 const config = createConfig(
