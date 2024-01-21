@@ -2,6 +2,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ProgressBar from 'react-bootstrap/ProgressBar';
+// index.js
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function CardItem(props) {
     
@@ -18,7 +21,8 @@ function CardItem(props) {
           </figure>
           <div className='cards__item__info'>
             <h5 className='cards__item__text'>{props.text}</h5>
-            <ProgressBar now={10} max={100} label="10/100 GHO tokens raised" visuallyHidden />
+            <ProgressBar now={5000} max={100000}  />
+            <h5 className='cards__item__text'>5000/100000 GHO tokens raised.</h5>
             <div className="lend-button">
               <button className="btn btn-success">Lend</button>
             </div>
