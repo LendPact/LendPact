@@ -9,25 +9,25 @@ import { useAccount } from "wagmi";
 
 function HeroSection() {
   const { address, isConnecting, isDisconnected,isConnected } = useAccount();
-  const handleBecomeLenderClick = () => {    
+  const handleBecomeLenderClick = () => {  console.log("handleBecomeLenderClick");  
   if (isConnected) {
      // Wallet is connected, proceed with your logic
      toast.success('Wallet is connected! Proceeding to become a lender.', {
       position: 'bottom-center',
-      autoClose: 10000, // 10 seconds
+      autoClose: 600000, // 10 seconds
     });
   }
   if (isDisconnected) {
     toast.error('Wallet is not connected. Please connect your wallet at top right.', {
-      position: 'bottom-center',
-      autoClose: 10000, // 10 seconds
+      position: 'top-center',
+      autoClose: 600000, // 10 seconds
 
     });
   }
   if (isConnecting) {
     toast.info('Connecting wallet...', {
-      position: 'bottom-center',
-      autoClose: 10000, // 10 seconds
+      position: 'top-center',
+      autoClose: 600000, // 10 seconds
 
     });
   }

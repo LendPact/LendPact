@@ -36,7 +36,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home/>} exact />
           <Route path='/lend' element={<Lend/>} />
-          <Route path='/borrow' component={<Borrow/>} />
+          <Route path='/borrow' element={<Borrow/>} />
           <Route path='/connect-wallet' element={<Connectwallet/>} />
         </Routes>
         <Footer />
