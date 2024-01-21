@@ -2,9 +2,38 @@ import React from 'react';
 import '../App.css';
 import { Button } from './button.js';
 import './herosection.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { useAccount } from "wagmi";
 
 
 function HeroSection() {
+  const { address, isConnecting, isDisconnected,isConnected } = useAccount();
+  const handleBecomeLenderClick = () => {    
+  if (isConnected) {
+     // Wallet is connected, proceed with your logic
+     toast.success('Wallet is connected! Proceeding to become a lender.', {
+      position: 'bottom-center',
+      autoClose: 10000, // 10 seconds
+    });
+  }
+  if (isDisconnected) {
+    toast.error('Wallet is not connected. Please connect your wallet at top right.', {
+      position: 'bottom-center',
+      autoClose: 10000, // 10 seconds
+
+    });
+  }
+  if (isConnecting) {
+    toast.info('Connecting wallet...', {
+      position: 'bottom-center',
+      autoClose: 10000, // 10 seconds
+
+    });
+  }
+ 
+}
+
   console.log('HeroSection component is being rendered');
   return (
     <div className='hero-container'>
@@ -16,18 +45,22 @@ function HeroSection() {
           className='btns'
           buttonStyle='btn--outline'
           buttonSize='btn--large'
+          to='/lend'
+          onClick={handleBecomeLenderClick}
         >
           Become a lender
         </Button>
         <Button
           className='btns'
-          buttonStyle='btn--primary'
+          buttonStyle='btn--outline'
           buttonSize='btn--large'
-          onClick={console.log('hey')}
+          to='/borrow'  // Security best practice
+        onClick={console.log('hey')}
         >
-          How does it work? <i className='far fa-play-circle' />
+          Become a Borrower <i className='far fa-play-circle' />
         </Button>
       </div>
+      <ToastContainer />
     </div>
   );
 }
