@@ -13,13 +13,13 @@ function Cards() {
               src='images/uniswap.jpeg'
               text='Uniswap is a protocol for automated token exchange on Ethereum.'
               label='Defi'
-              path='/services'
+              path='/lend'
             />
             <CardItem
               src='images/lido.png'
               text='Lido is a liquid staking protocol for ETH 2.0.'
               label='Defi'
-              path='/services'
+              path='/lend'
             />
           </ul>
           <ul className='cards__items'>
@@ -27,19 +27,19 @@ function Cards() {
               src='images/makerdao.jpg'
               text='MakerDAO is a decentralized organization dedicated to bringing financial stability and transparency to the world economy.'
               label='Defi'
-              path='/services'
+              path='/lend'
             />
             <CardItem
               src='images/aave.jpeg'
               text='Aave is an open-source, non-custodial protocol to earn interest on deposits and borrow assets. '
               label='Defi'
-              path='/products'
+              path='/lend'
             />
             <CardItem
               src='images/illuvium.jpeg'
               text='Illuvium is a decentralized, NFT collection and auto battler game built on the Ethereum blockchain.'
               label='Gaming'
-              path='/sign-up'
+              path='/lend'
             />
           </ul>
         </div>
